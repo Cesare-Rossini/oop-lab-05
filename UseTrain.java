@@ -28,5 +28,22 @@ class UseTrain {
          * 5) Prenotare nuovamente dei posti e stampare le nuove percentuali di
          * occupazione
          */
+
+        Train testTrain = new Train();
+        testTrain.build(500, 100, 400);
+
+        testTrain.reserveFirstClassSeats(20);
+        testTrain.reserveSecondClassSeats(79);
+
+        IO.println(testTrain.getFirstClassOccupancyRatio() + "%");
+        IO.println(testTrain.getSecondClassOccupancyRatio() + "%");
+
+        testTrain.deleteAllReservations();
+
+        testTrain.reserveFirstClassSeats(100);
+        testTrain.reserveSecondClassSeats(400);
+
+        IO.println(testTrain.getFirstClassOccupancyRatio() + "%");
+        IO.println(testTrain.getSecondClassOccupancyRatio() + "%");
     }
 }
